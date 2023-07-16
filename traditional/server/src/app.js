@@ -33,5 +33,5 @@ app.get('/js/:fileName', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`App is running on 'http://localhost:3000/'`);
+    console.log(`App is running on 'http://localhost:${port}/'`);
 });
