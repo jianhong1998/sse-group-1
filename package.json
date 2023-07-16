@@ -1,0 +1,24 @@
+{
+    "name": "01.-assignment-part-2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "install": "concurrently \"npm:install:traditional\" \"npm:install:react\"",
+        "dev": "concurrently \"npm:dev:traditional\" \"npm:dev:react\"",
+        "reset": "concurrently \"npm:reset:root\" \"npm:reset:traditional\" \"npm:reset:react\"",
+        "install:traditional": "cd traditional/server && npm install",
+        "install:react": "cd react && npm install",
+        "dev:traditional": "cd traditional/server && npm run dev",
+        "dev:react": "cd react && npm run dev",
+        "reset:root": "rm -rf node_modules",
+        "reset:traditional": "cd traditional/server && rm -rf node_modules",
+        "reset:react": "cd react && rm -rf node_modules"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "concurrently": "^8.2.0"
+    }
+}
