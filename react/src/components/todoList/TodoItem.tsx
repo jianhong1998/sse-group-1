@@ -12,10 +12,8 @@ interface TodoItemProps {
 
 const TodoItem: FC<TodoItemProps> = ({ item, clickable }) => {
     const linkRef = useRef<HTMLAnchorElement>(null);
-
-    const dispatch = useAppDispatch();
-
     const { setViewItem } = todoItemSliceActions;
+    const dispatch = useAppDispatch();
 
     const onClickHandler = () => {
         dispatch(setViewItem(item));
