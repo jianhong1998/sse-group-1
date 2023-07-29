@@ -1,64 +1,64 @@
-.calculator-container {
-    background-color: black;
-    padding: 1em;
-    border-radius: 25px;
-    padding: 20px;
-    width: 350px;
+header {
+    color: #2982ff;
 }
 
-.calculator-container .grid-container {
-    grid-gap: 0.7em 1em;
-    justify-content: center;
+.list-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
 
-.display-container {
-    background-color: white;
-    height: 60px;
-    border-radius: 5px;
-    grid-column: span 4;
-    margin-bottom: 10px;
-    padding-right: 15px;
-    color: #000000;
-    font-size: 3em;
-    font-weight: 700;
-    text-align: right;
-    overflow-x: scroll;
+.list-item {
+    background-color: #d6e7ff;
+    border: #2982ff solid 2px;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em 0;
+    font-size: 1.5em;
+    color: #2982ff;
+    box-shadow: grey 1px 1px 4px 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.display-container h2 {
-    font-size: inherit;
-    margin: 0;
+#clear-all-items-button {
+    background-color: #ffcece;
+    border: #b54343 solid 2px;
+    color: #b54343;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 100;
 }
 
-.grid-container {
-    display: grid;
+#clear-all-items-button:focus {
+    background-color: #801b1b;
+    color: #ffffff;
 }
 
-.grid-4-column {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-container .col-4 {
-    grid-column-start: span 4;
-}
-
-.grid-container .col-2 {
-    grid-column-start: span 2;
-}
-
-.calculator-button {
-    font-weight: 700;
-    font-size: 2em;
-    border-radius: 5px;
-    border: none;
+#add-button {
+    border: #2982ff solid 2px;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    color: #2982ff;
+    background-color: #d6e7ff;
     cursor: pointer;
 }
 
-.calculator-button:focus {
-    background-color: grey;
+#add-button:focus {
+    background-color: #8bbbff;
 }
 
-.bg-orange {
-    background-color: orange;
+#todo-list-input {
+    border: #2982ff solid 2px;
+    border-radius: 10px;
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: #2982ff;
+    background-color: #d6e7ff;
 }

@@ -2,38 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/style/index" />
-        <title>Calculator</title>
+        <title>Todo List</title>
     </head>
     <body>
-        <section class="calculator-container">
-            <div class="grid-container grid-4-column">
-                <div class="display-container col-4">
-                    <h2 id="number-holder">0</h2>
-                </div>
-                <button class="calculator-button number-button">7</button>
-                <button class="calculator-button number-button">8</button>
-                <button class="calculator-button number-button">9</button>
-                <button class="calculator-button operation-button">/</button>
-                <button class="calculator-button number-button">4</button>
-                <button class="calculator-button number-button">5</button>
-                <button class="calculator-button number-button">6</button>
-                <button class="calculator-button operation-button">x</button>
-                <button class="calculator-button number-button">1</button>
-                <button class="calculator-button number-button">2</button>
-                <button class="calculator-button number-button">3</button>
-                <button class="calculator-button operation-button">-</button>
-                <button class="calculator-button col-2 number-button">0</button>
-                <button class="calculator-button dot-button">.</button>
-                <button class="calculator-button operation-button">+</button>
-                <button class="calculator-button col-4 bg-orange equal-button">
-                    =
-                </button>
-            </div>
-        </section>
-
+        <header>
+            <h1>Todo List</h1>
+        </header>
+        <div>
+            <input type="text" id="todo-list-input" />
+            <button id="add-button">Add</button>
+            <button id="clear-all-items-button">Clear All Items</button>
+        </div>
+        <div id="list-holder"></div>
         <script src="/js/index"></script>
     </body>
 </html>
