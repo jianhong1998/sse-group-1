@@ -1,17 +1,3 @@
-.addButton {
-    border: #2982ff solid 2px;
-    border-radius: 10px;
-    padding: 0.5em 1em;
-    font-size: 1.5em;
-    color: #2982ff;
-    background-color: #d6e7ff;
-    cursor: pointer;
-}
-
-.addButton:focus {
-    background-color: #8bbbff;
-}
-
 .todoListInput {
     border: #2982ff solid 2px;
     border-radius: 10px;
@@ -23,8 +9,16 @@
 
 .todoListContainer {
     width: 100%;
-    height: 80vh;
-    overflow-y: scroll;
+    /* height: 80vh; */
+    /* overflow-y: scroll; */
     justify-content: flex-start;
     align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+}
+
+.addButtonContainer {
+    margin: 0 4px;
 }

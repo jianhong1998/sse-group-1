@@ -1,0 +1,35 @@
+.button {
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.blueButton {
+    border: #2982ff solid 2px;
+    color: #2982ff;
+    background-color: #d6e7ff;
+}
+
+.blueButton:focus {
+    background-color: #8bbbff;
+}
+
+.redButton {
+    background-color: #ffcece;
+    border: #b54343 solid 2px;
+    color: #b54343;
+}
+
+.redButton:focus {
+    background-color: #801b1b;
+    color: #ffffff;
+}
+
+.lg {
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+}
+
+.md {
+    padding: 1em;
+    font-size: 1em;
+}
