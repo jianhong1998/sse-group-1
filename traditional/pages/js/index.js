@@ -1,3 +1,15 @@
+const allTodoItems = JSON.parse(localStorage.getItem('allTodoItems')) || [];
+
+const storeVisitingItem = (item) => {
+    localStorage.setItem('item', item);
+};
+
+const loadTodoItems = () => {
+    allTodoItems.forEach((item) => {
+        addItem(item);
+    });
+};
+
 const getListHolder = () => {
     return document.getElementById('list-holder');
 };
@@ -16,10 +28,25 @@ const addItem = (item) => {
     }
 
     const listItem = document.createElement('div');
-    listItem.appendChild(document.createTextNode(item));
     listItem.classList.add('list-item');
 
+    const textContainer = document.createElement('div');
+    textContainer.appendChild(document.createTextNode(item));
+
+    listItem.appendChild(textContainer);
+
+    listItem.addEventListener('click', () => {
+        storeVisitingItem(item);
+
+        window.location.replace('/todo-item');
+    });
+
     listHolder.appendChild(listItem);
+};
+
+const addItemToArray = (item) => {
+    allTodoItems.push(item);
+    localStorage.setItem('allTodoItems', JSON.stringify(allTodoItems));
 };
 
 const getInputValue = () => {
@@ -44,7 +71,7 @@ const clearInputValue = () => {
     input.value = '';
 };
 
-const submitTodoItem = () => {
+const addButtonOnClickHandler = () => {
     try {
         const value = getInputValue();
 
@@ -53,6 +80,7 @@ const submitTodoItem = () => {
         }
 
         addItem(value);
+        addItemToArray(value);
         clearInputValue();
     } catch (error) {
         if (error instanceof Error) {
@@ -63,4 +91,32 @@ const submitTodoItem = () => {
     }
 };
 
-document.getElementById('add-button').addEventListener('click', submitTodoItem);
+const clearAllItems = () => {
+    while (allTodoItems.length > 0) {
+        allTodoItems.pop();
+    }
+
+    localStorage.removeItem('allTodoItems');
+
+    const listHolder = getListHolder();
+
+    const children = listHolder.children;
+
+    while (children.length > 0) {
+        const element = children.item(0);
+
+        listHolder.removeChild(element);
+    }
+};
+
+localStorage.removeItem('item');
+
+loadTodoItems();
+
+document
+    .getElementById('add-button')
+    .addEventListener('click', addButtonOnClickHandler);
+
+document
+    .getElementById('clear-all-items-button')
+    .addEventListener('click', clearAllItems);
