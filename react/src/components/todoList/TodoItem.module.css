@@ -1,0 +1,10 @@
+.itemContainer {
+    background-color: #d6e7ff;
+    border: #2982ff solid 2px;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em 0;
+    font-size: 1.5em;
+    color: #2982ff;
+    box-shadow: grey 1px 1px 4px 1px;
+}

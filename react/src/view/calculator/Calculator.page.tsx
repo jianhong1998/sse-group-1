@@ -4,7 +4,7 @@ import { FC, useState } from 'react';
 import DisplayScreen from '../../components/displayScreen/DisplayScreen';
 import ButtonGroup from '../../components/buttonGroup/ButtonGroup';
 
-const Calculator: FC = () => {
+const CalculatorPage: FC = () => {
     const [result, setResult] = useState<string>('0');
 
     return (
@@ -15,4 +15,4 @@ const Calculator: FC = () => {
     );
 };
 
-export default Calculator;
+export default CalculatorPage;
