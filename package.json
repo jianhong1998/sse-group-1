@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "install": "concurrently \"npm:install:traditional\" \"npm:install:react\"",
+        "install:all": "npm i && concurrently \"npm:install:traditional\" \"npm:install:react\"",
         "dev": "concurrently \"npm:dev:traditional\" \"npm:dev:react\"",
         "reset": "concurrently \"npm:reset:root\" \"npm:reset:traditional\" \"npm:reset:react\"",
         "install:traditional": "cd traditional/server && npm install",

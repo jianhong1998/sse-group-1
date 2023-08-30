@@ -8,3 +8,11 @@
     color: #2982ff;
     box-shadow: grey 1px 1px 4px 1px;
 }
+
+.link {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
